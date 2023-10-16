@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 
-
 import PetsListPage from './pages/Pets-List.jsx'
+import PetFormCreate from './components/PetFormCreate.jsx'
+import PetAddUpdShow from './pages/Pet-AddUpdShow.jsx'
 
 import {
   createBrowserRouter,
@@ -18,14 +19,24 @@ const routes = [
     errorElement: <div>404</div>,
     children: [
       {
-        path: "/pets",
+        path: "pets",
         element: <PetsListPage />,
         children: [
+          {
+            path: "pet/:id",
+            element: <PetAddUpdShow />,
+          }
+          
         ]
+      },
+      {
+        path: "/add",
+        element: <PetFormCreate />,
       },
     ]
   },
-]
+];
+
 
 const router = createBrowserRouter(routes)
 

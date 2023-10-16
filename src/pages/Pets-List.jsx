@@ -12,9 +12,9 @@ export default function PetsListPage() {
         <h1 className="text-center">Pets List</h1>
         <div className="container d-flex justify-content-center my-3">
             <Search search={search} setSearch={setSearch}></Search>
-            <button className="btn btn-primary">Add Pet
-                <Link to={'/add'}></Link>
-            </button>
+            <Link to="/add">
+                <button className="btn btn-primary">Add Pet</button>
+            </Link>
         </div>
         <div className="container">
         <PetsList search={search} />

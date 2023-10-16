@@ -3,6 +3,7 @@ import { createOrUpdatePet, deletePet, getAllPets, getPetById } from "./services
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Outlet } from "react-router-dom";
+import NavBar from "./components/Navbar";
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
 
     }
 
-    test()
+    //test()
 
     return () => {
       //Cancelar o pedido caso o componente seja desmontado
@@ -53,7 +54,10 @@ function App() {
 
   return (
     <>
-      <Outlet />
+      <NavBar />
+      <div>
+        <Outlet />
+      </div>
     </>
   )
 }

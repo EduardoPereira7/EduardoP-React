@@ -1,5 +1,6 @@
 import React from "react";
 import { deletePet } from "../services/main/pets";
+import {Link} from "react-router-dom";
 
 export default function PetCard({ pet, onDelete }) {
 
@@ -17,7 +18,9 @@ export default function PetCard({ pet, onDelete }) {
         <td>{pet.breed}</td>
         <td>{pet.dateOfBirth}</td>
         <td>
-            <button className="btn btn-primary">Show</button>
+            <Link to={`pet/${pet.id}`}>
+                <button className="btn btn-primary">Show</button>
+            </Link>
             <button className="btn btn-danger" onClick={handleDelete}>Delete</button>
         </td>
     </>
