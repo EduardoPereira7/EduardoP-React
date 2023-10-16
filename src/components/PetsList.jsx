@@ -39,6 +39,7 @@ export default function PetsList({search}) {
                 <th>Name</th>
                 <th>Breed</th>
                 <th>Date of Birth</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>

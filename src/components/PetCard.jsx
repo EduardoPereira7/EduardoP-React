@@ -7,7 +7,8 @@ export default function PetCard({ pet }) {
         <td>{pet.breed}</td>
         <td>{pet.dateOfBirth}</td>
         <td>
-            <button></button>
+            <button className="btn btn-primary">Show</button>
+            <button className="btn btn-danger">Delete</button>
         </td>
     </>
     )
