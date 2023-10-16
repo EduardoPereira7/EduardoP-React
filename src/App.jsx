@@ -28,17 +28,17 @@ function App() {
       petCreated.name = "Fisher"
       const petUpdated = await createOrUpdatePet(petCreated)
 
-      console.log(petUpdated)
+      //console.log(petUpdated)
 
-      const pet = await getPetById(petUpdated.id)
+      //const pet = await getPetById(petUpdated.id)
 
-      console.log(pet)
+      //console.log(pet)
 
-      await deletePet(petUpdated.id)
+      //await deletePet(petUpdated.id)
 
-      const allPetsAfterDelete = await getAllPets()
+      //const allPetsAfterDelete = await getAllPets()
 
-      console.log(allPetsAfterDelete)
+      //console.log(allPetsAfterDelete)
 
     }
 

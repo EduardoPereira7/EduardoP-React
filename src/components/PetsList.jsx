@@ -28,6 +28,11 @@ export default function PetsList({search}) {
         pet.name.toLowerCase().includes(search.toLowerCase())
     );
 
+    const handleDelete = (petId) => {
+        setPets((prevPets) => prevPets.filter((pet) => pet.id !== petId)
+        );
+    }
+
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{error.message}</p>;
 
@@ -45,7 +50,7 @@ export default function PetsList({search}) {
         <tbody>
             {filteredPets.map((pet) => (
                 <tr key={pet.id}>
-                <PetCard pet={pet} />
+                <PetCard pet={pet} onDelete={handleDelete} />
                 </tr>
             ))}
         </tbody>

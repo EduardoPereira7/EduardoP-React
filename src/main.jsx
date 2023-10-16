@@ -20,6 +20,8 @@ const routes = [
       {
         path: "/pets",
         element: <PetsListPage />,
+        children: [
+        ]
       },
     ]
   },
